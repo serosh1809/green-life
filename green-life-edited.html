@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Green Life - Франшиза Эко-бизнеса</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#95d3ba",
+                        "on-tertiary-fixed": "#131e19",
+                        "primary": "#006e2f",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#3e4943",
+                        "inverse-primary": "#4ae176",
+                        "tertiary": "#55615a",
+                        "secondary-container": "#adedd3",
+                        "on-background": "#0b1c30",
+                        "inverse-surface": "#213145",
+                        "tertiary-container": "#a2afa7",
+                        "on-primary-fixed-variant": "#005321",
+                        "tertiary-fixed": "#d9e6dd",
+                        "secondary": "#2b6954",
+                        "surface-dim": "#cbdbf5",
+                        "primary-container": "#22c55e",
+                        "on-secondary-fixed": "#002117",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-fixed-dim": "#bdcac1",
+                        "background": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#0b513d",
+                        "primary-fixed-dim": "#4ae176",
+                        "secondary-fixed": "#b0f0d6",
+                        "outline-variant": "#bccbb9",
+                        "on-secondary-container": "#306d58",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-container": "#004b1e",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#37433c",
+                        "primary-fixed": "#6bff8f",
+                        "on-surface-variant": "#3d4a3d",
+                        "on-surface": "#0b1c30",
+                        "outline": "#6d7b6c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "on-primary-fixed": "#002109",
+                        "surface": "#f8f9ff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#006e2f",
+                        "surface-container-low": "#eff4ff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "display": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    maxWidth: {
+                        "container-max": "1280px"
+                    },
+                    padding: {
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px"
+                    },
+                    gap: {
+                        "gutter": "24px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hero-gradient { background: linear-gradient(135deg, #002109 0%, #006e2f 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+        @media (max-width: 768px) { .bento-grid { display: flex; flex-direction: column; } }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-on-background shadow-sm">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between h-20">
+<div class="font-headline-md text-2xl font-extrabold text-primary dark:text-primary-fixed tracking-tight">
+                Green Life
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-md text-sm transition-colors hover:scale-105 duration-200" href="#">Главная</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-sm hover:text-primary transition-colors hover:scale-105 duration-200" href="#what">О бизнесе</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-sm hover:text-primary transition-colors hover:scale-105 duration-200" href="#how">Обучение</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-sm hover:text-primary transition-colors hover:scale-105 duration-200" href="#apply">Стать партнёром</a>
+</div>
+<div class="flex items-center gap-4">
+
+<a href="#apply" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md shadow-sm hover:scale-105 transition-transform duration-200">Присоединиться</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32 bg-on-background">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="A sprawling, lush green field during a golden sunrise, symbolizing growth and fresh beginnings. The lighting is warm and natural, creating a sense of hope and professional vitality that aligns with the Green Life brand identity. High-resolution photography with a clean, airy feeling suitable for a corporate eco-friendly landing page." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Y6EQfgDE1P1q4pLzO9hdxFmCzc4DMq-hm8dGjT_D8ZdNS5yaFlb7DpyDIf1XHLgAxErg7jW675KMPKw_mKJgHRhSRndbEQ-hjdI-u-eT5DpwfIwtbyg-psgGYmKCCkF3kk-vHDJUrGuLJcYxe5OL8Pqe1a5H1cyGwlHpjG2HP0ha3wQrxZDHejGYhmjUrxsy9ic0h2rP8ypxkVHVWcWOsAxju7DgZE_DbRTJOtXk8j-TBuvi6sv8lWZb8Srtk3Oq9Mh4Peyuzjtk"/>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 text-center">
+<h1 class="text-4xl md:text-6xl font-bold text-on-primary mb-6 leading-tight max-w-4xl mx-auto">
+                    Франшиза Green Life — Эко-бизнес в вашем городе
+                </h1>
+<p class="text-lg md:text-xl text-primary-fixed mb-10 max-w-2xl mx-auto font-body">
+                    Постройте умный и прибыльный бизнес, вдохновленный природой и технологиями. Станьте частью глобальной сети здорового образа жизни.
+                </p>
+<a class="inline-block bg-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg" href="#apply">
+                    Отправить заявку
+                </a>
+</div>
+</section>
+<!-- What is Green Life Franchise -->
+<section class="py-24 bg-surface" id="what">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-on-surface">Что такое франшиза Green Life</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<!-- Big Card 1 -->
+<div class="bg-on-background text-on-primary p-10 rounded-2xl flex flex-col justify-between group overflow-hidden relative min-h-[320px] hover:shadow-2xl transition-shadow">
+<div>
+<h3 class="text-2xl font-bold mb-4">Готовый бизнес</h3>
+<p class="text-surface-variant opacity-90 leading-relaxed max-w-md">
+                                Вы отвечаете только за работу даркстора. Поиск клиентов и поставщиков, реклама и продвижение — на нас.
+                            </p>
+</div>
+<div class="mt-8 grid grid-cols-6 gap-2">
+<div class="h-12 bg-primary/20 rounded"></div>
+<div class="h-12 bg-primary/40 rounded"></div>
+<div class="h-12 bg-primary/60 rounded"></div>
+<div class="h-12 bg-primary/40 rounded"></div>
+<div class="h-12 bg-primary/20 rounded"></div>
+<div class="h-12 bg-primary/10 rounded"></div>
+</div>
+</div>
+<!-- Big Card 2 -->
+<div class="bg-on-background text-on-primary p-10 rounded-2xl flex flex-col justify-between group overflow-hidden relative min-h-[320px] hover:shadow-2xl transition-shadow">
+<div>
+<h3 class="text-2xl font-bold mb-4">Сильный бренд</h3>
+<p class="text-surface-variant opacity-90 leading-relaxed max-w-md">
+                                Green Life — часть экосистемы будущего, бренду которого доверяют миллионы людей, заботящихся о планете.
+                            </p>
+</div>
+<div class="absolute bottom-0 right-0 w-1/2 h-1/2 opacity-10">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-primary text-on-primary p-8 rounded-2xl hover:translate-y-[-8px] transition-transform">
+<h3 class="text-xl font-bold mb-3">Технологии</h3>
+<p class="text-on-primary/80">С вами будет вся сила IT-решений Green Life — логистика, курьеры и трафик.</p>
+</div>
+<div class="bg-secondary text-on-primary p-8 rounded-2xl hover:translate-y-[-8px] transition-transform">
+<h3 class="text-xl font-bold mb-3">Помощь во всем</h3>
+<p class="text-on-primary/80">Обучение, запуск и защищенная зона, в которой не будет других партнеров.</p>
+</div>
+<div class="bg-tertiary text-on-primary p-8 rounded-2xl hover:translate-y-[-8px] transition-transform">
+<h3 class="text-xl font-bold mb-3">Понятный доход</h3>
+<p class="text-on-primary/80">Прозрачная модель заработка от продажи и экологичной доставки заказов.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How it works -->
+<section class="py-24 bg-white overflow-hidden" id="how">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 relative">
+<div class="bg-surface-container rounded-2xl p-10 relative z-10 shadow-xl border border-outline-variant/30">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div class="h-1 w-20 bg-primary/20 rounded-full"></div>
+<div class="w-12 h-12 bg-outline-variant rounded-full flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-6">Собираем заказ</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">check</span>
+</div>
+<p class="font-medium">Заказ принят в работу</p>
+</div>
+<div class="flex items-center gap-4 bg-white/50 p-4 rounded-xl">
+<div class="w-10 h-10 bg-surface-variant rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">forum</span>
+</div>
+<p class="text-on-surface-variant">Чат поддержки</p>
+</div>
+</div>
+</div>
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/5 rounded-full blur-2xl"></div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold mb-6 text-on-surface">Как работает Green Life?</h2>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+                            Покупатель делает заказ в приложении, после чего заказ попадает в ближайший эко-центр Green Life. Там его собирают за несколько минут и передают курьеру, который доставляет его в срок от 15 минут.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">eco</span>
+<span>100% экологичная упаковка</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">electric_moped</span>
+<span>Электро-транспорт для доставки</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">monitoring</span>
+<span>Полная автоматизация процессов</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Block -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-primary rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+<div class="p-12 md:p-20 text-center md:text-left flex-1 bg-primary-container/20">
+<div class="text-5xl md:text-7xl font-extrabold text-on-primary mb-2">15 городов</div>
+<p class="text-xl text-primary-fixed uppercase tracking-widest font-bold">Активного присутствия</p>
+</div>
+<div class="p-12 md:p-20 text-center md:text-left flex-1 bg-on-background">
+<div class="text-5xl md:text-7xl font-extrabold text-on-primary mb-2">600 центров</div>
+<p class="text-xl text-primary-fixed-dim uppercase tracking-widest font-bold">Распределения по всей сети</p>
+</div>
+</div>
+<div class="mt-16 text-center max-w-3xl mx-auto">
+<h3 class="text-2xl font-bold mb-4">Где работает Green Life?</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Сейчас работает 600 дарксторов в 15 крупных городах России: Москва, Санкт-Петербург, Нижний Новгород, Ростов-на-Дону, Краснодар, Казань, Екатеринбург, Новосибирск, Иркутск, Челябинск, Тюмень, Ярославль, Перми, Туле и Твери.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Why Special (Bento) -->
+<section class="py-24 bg-surface" id="what">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-on-surface">Почему франшиза Green Life особенная</h2>
+<div class="bento-grid">
+<!-- Item 1 -->
+<div class="col-span-12 md:col-span-4 bg-on-background p-8 rounded-2xl flex flex-col justify-between h-48 hover:shadow-xl transition-all border border-white/10 group">
+<div class="text-primary text-3xl font-bold opacity-50 group-hover:opacity-100 transition-opacity">01</div>
+<div class="text-on-primary font-bold text-lg">Доверие к бренду и узнаваемость</div>
+</div>
+<!-- Item 2 -->
+<div class="col-span-12 md:col-span-4 bg-primary-container p-8 rounded-2xl flex flex-col justify-between h-48 hover:shadow-xl transition-all group">
+<div class="text-on-primary-container text-3xl font-bold opacity-50 group-hover:opacity-100 transition-opacity">02</div>
+<div class="text-on-primary-container font-bold text-lg">Дистрибуция через приложения экосистемы</div>
+</div>
+<!-- Item 3 -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-highest p-8 rounded-2xl flex flex-col justify-between h-48 hover:shadow-xl transition-all group">
+<div class="text-primary text-3xl font-bold opacity-50 group-hover:opacity-100 transition-opacity">03</div>
+<div class="text-on-surface font-bold text-lg">Единая ассортиментная матрица и контракты</div>
+</div>
+<!-- Row 2 -->
+<div class="col-span-12 md:col-span-3 bg-white p-8 rounded-2xl border border-outline-variant h-48 flex flex-col justify-between hover:shadow-md">
+<div class="text-primary text-2xl font-bold">04</div>
+<div class="font-bold">Маркетинговая поддержка 24/7</div>
+</div>
+<div class="col-span-12 md:col-span-6 bg-secondary text-on-primary p-8 rounded-2xl h-48 flex flex-col justify-between hover:shadow-md">
+<div class="text-secondary-fixed text-2xl font-bold">05</div>
+<div class="font-bold text-xl">Защитная зона: гарантируем отсутствие конкуренции внутри вашей локации</div>
+</div>
+<div class="col-span-12 md:col-span-3 bg-white p-8 rounded-2xl border border-outline-variant h-48 flex flex-col justify-between hover:shadow-md">
+<div class="text-primary text-2xl font-bold">06</div>
+<div class="font-bold">Система обучения персонала</div>
+</div>
+<!-- Row 3 -->
+<div class="col-span-12 md:col-span-4 bg-surface-container p-8 rounded-2xl h-48 flex flex-col justify-between">
+<div class="text-primary text-2xl font-bold">07</div>
+<div class="font-bold">IT-подход к каждому бизнес-процессу</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-on-background text-on-primary p-8 rounded-2xl h-48 flex flex-col justify-between">
+<div class="text-primary text-2xl font-bold">08</div>
+<div class="font-bold">Юридическая поддержка и документация</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-primary text-on-primary p-8 rounded-2xl h-48 flex flex-col justify-between">
+<div class="text-on-primary text-2xl font-bold">09</div>
+<div class="font-bold text-xl">Личный менеджер на этапе запуска</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Form Section -->
+<section class="py-24 relative bg-on-background overflow-hidden" id="apply">
+<div class="absolute inset-0 z-0 opacity-10 flex">
+<div class="flex-1 bg-primary h-full"></div>
+<div class="flex-1 bg-surface-container h-full"></div>
+<div class="flex-1 bg-primary h-full"></div>
+<div class="flex-1 bg-surface-container h-full"></div>
+</div>
+<div class="max-w-4xl mx-auto px-margin-desktop relative z-10">
+<div class="bg-white rounded-3xl p-8 md:p-16 shadow-2xl">
+<h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-on-surface">Заявка для открытия франшизы Green Life</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-secondary mb-2">* Ф.И.О.</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary" placeholder="Введите имя" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-secondary mb-2">* Электронная почта</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary" placeholder="example@mail.com" type="email"/>
+<span class="text-xs text-on-surface-variant mt-2 block">На этот адрес мы вышлем инструкцию</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-secondary mb-2">* Телефон</label>
+<div class="relative">
+<span class="absolute left-4 top-4 text-on-surface-variant">+7</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 pl-10 focus:ring-2 focus:ring-primary" placeholder="999 999 99 99" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-secondary mb-2">* В каком городе вы планируете открыть?</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary" placeholder="Укажите город" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-secondary mb-2">* Выберите страну</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-primary focus:ring-primary" name="country" type="radio"/>
+<span>Россия</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-primary focus:ring-primary" name="country" type="radio"/>
+<span>Узбекистан</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-primary focus:ring-primary" name="country" type="radio"/>
+<span>Казахстан</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-secondary mb-2">Поле для дополнительных вопросов</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary" placeholder="Ваш комментарий" rows="4"></textarea>
+</div>
+<div class="space-y-4 pt-4">
+<label class="flex items-start gap-3 cursor-pointer">
+<input class="mt-1 text-primary rounded focus:ring-primary" type="checkbox"/>
+<span class="text-xs text-on-surface-variant">Я даю согласие на обработку персональных данных ООО "Грин Лайф" на условиях политики конфиденциальности.</span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer">
+<input class="mt-1 text-primary rounded focus:ring-primary" type="checkbox"/>
+<span class="text-xs text-on-surface-variant">Даю согласие на получение индивидуальных предложений по почте или в мессенджерах.</span>
+</label>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-xl font-bold text-xl shadow-lg hover:bg-secondary transition-colors mt-6" type="submit">
+                            Отправить заявку
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-4xl mx-auto px-margin-desktop">
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-on-surface">Вопросы и ответы</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-bold text-on-surface">Почему именно ваша франшиза?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-6 pt-0 text-on-surface-variant leading-relaxed">
+                            Мы предлагаем уникальную эко-систему, которая объединяет современные IT-технологии с заботой об окружающей среде. Наш бренд узнаваем, а операционная модель проверена на сотнях успешных точек.
+                        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-bold text-on-surface">Что такое даркстор/эко-центр?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-6 pt-0 text-on-surface-variant leading-relaxed">
+                            Это склад закрытого типа, оптимизированный для максимально быстрой сборки заказов, сделанных онлайн. В Green Life мы уделяем особое внимание экологичности хранения и минимальному углеродному следу.
+                        </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-bold text-on-surface">Сколько нужно сотрудников, чтобы бизнес функционировал?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-6 pt-0 text-on-surface-variant leading-relaxed">
+                            Обычно на один центр требуется от 5 до 12 сотрудников в смену, включая администратора, сборщиков заказов и курьеров. Мы помогаем с наймом и обучением всей команды.
+                        </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-bold text-on-surface">Сколько времени нужно, чтобы открыть точку по франшизе?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-6 pt-0 text-on-surface-variant leading-relaxed">
+                            В среднем запуск занимает от 45 до 60 дней — от подписания договора и поиска помещения до первой доставленной корзины.
+                        </div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-bold text-on-surface">Каков объем необходимых инвестиций?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-6 pt-0 text-on-surface-variant leading-relaxed">
+                            Инвестиции начинаются от 12 млн рублей. В эту сумму включена аренда, оборудование по стандартам Green Life, первоначальный товарный запас и маркетинговый бюджет на запуск.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container dark:bg-on-background">
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-gutter">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-xl font-bold text-primary dark:text-primary-fixed">Green Life</div>
+<p class="text-on-surface-variant text-sm max-w-sm">
+                    © 2024 Green Life Global. All rights reserved. Professional Network Marketing Opportunity.
+                </p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-medium" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-medium" href="#">Income Disclosure</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-medium" href="#">Compliance</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm" href="#">
+<span class="material-symbols-outlined text-primary">send</span>
+</a>
+<a href="#apply" class="bg-primary text-on-primary px-6 py-2 rounded-lg text-sm font-bold shadow-md hover:translate-y-[-2px] transition-transform">Подать заявку</a>
+</div>
+</div>
+</footer>
+<!-- Cookie Banner (Yandex Style) -->
+<div class="fixed bottom-6 right-6 z-[100] max-w-sm bg-on-background text-on-primary p-6 rounded-2xl shadow-2xl border border-white/10 hidden md:block" id="cookie-banner">
+<h4 class="font-bold mb-2">Green Life uses cookies</h4>
+<p class="text-xs text-surface-variant mb-4 leading-relaxed">
+            They ensure the smooth operation of all Green Life sites and services. For more information, please read our <a class="underline" href="#">Cookie Policy</a>.
+        </p>
+<div class="flex gap-2">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg text-xs font-bold hover:opacity-90" onclick="this.parentElement.parentElement.remove()">Allow all</button>
+<button class="bg-surface-variant text-on-surface px-4 py-2 rounded-lg text-xs font-bold hover:opacity-90" onclick="this.parentElement.parentElement.remove()">Essential only</button>
+<button class="bg-white/10 text-on-primary px-4 py-2 rounded-lg text-xs font-bold hover:bg-white/20">Settings</button>
+</div>
+</div>
+<script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            // Toggle current
+            const isOpen = !content.classList.contains('hidden');
+            
+            // Close all others
+            document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+            document.querySelectorAll('.material-symbols-outlined').forEach(i => i.classList.remove('rotate-180'));
+            
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body></html>
