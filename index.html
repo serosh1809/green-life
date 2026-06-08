@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Green Life - Ваш готовый бизнес</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#006e2f",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#bccbb9",
+                    "on-surface-variant": "#3d4a3d",
+                    "surface-tint": "#006e2f",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#b0f0d6",
+                    "tertiary-fixed": "#d9e6dd",
+                    "inverse-surface": "#213145",
+                    "on-tertiary-fixed": "#131e19",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary": "#55615a",
+                    "secondary": "#2b6954",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#6bff8f",
+                    "on-secondary-fixed": "#002117",
+                    "secondary-container": "#adedd3",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#005321",
+                    "on-background": "#0b1c30",
+                    "surface-variant": "#d3e4fe",
+                    "inverse-primary": "#4ae176",
+                    "surface": "#f8f9ff",
+                    "on-tertiary-container": "#37433c",
+                    "on-secondary-container": "#306d58",
+                    "outline": "#6d7b6c",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed-variant": "#0b513d",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed-dim": "#bdcac1",
+                    "primary-fixed-dim": "#4ae176",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#95d3ba",
+                    "primary-container": "#22c55e",
+                    "tertiary-container": "#a2afa7",
+                    "on-primary-fixed": "#002109",
+                    "on-tertiary-fixed-variant": "#3e4943",
+                    "on-primary-container": "#004b1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.08);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .page { display: none; }
+        .page.active { display: block; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-on-background shadow-sm">
+<div class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
+                Green Life
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="nav-link font-label-md text-label-md transition-colors cursor-pointer" data-page="home">Главная</a>
+<a class="nav-link font-label-md text-label-md transition-colors cursor-pointer" data-page="about">О бизнесе</a>
+<a class="nav-link text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors cursor-pointer" data-page="training">Обучение</a>
+<a class="nav-link text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors cursor-pointer" data-page="partner">Стать партнёром</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:scale-105 duration-200 shadow-md">Присоединиться</button>
+</div>
+</div>
+</header>
+
+<!-- ===== PAGE: HOME ===== -->
+<div id="page-home" class="page active">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-surface py-20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10 animate-fade-in-up">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-6">Готовая Бизнес-Система</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-6">Ваш готовый бизнес с Green Life</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    Начните путь к финансовой независимости с глобальным лидером в сфере эко-продуктов. Мы предоставляем все инструменты для вашего успеха.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md shadow-lg flex items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform">
+                        Начать обучение
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors">
+                        Узнать больше
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-secondary-container/30 rounded-full blur-3xl"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-1">
+<img alt="Successful entrepreneur in eco-office" class="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44Pi-P6cjea3Etgzz7151TE1tBEupPXbnQ6W-mNX9dOcY7NqHAA0FZAmyd6bmJvYrW_ogO7_9wR_XsJH_YzlOpWIGzX3T6KUpZke77-f46CUZ6PcjsgC8gOfHXYt4cK8NtOjrr8uiWx0rvj9MRfFlImDCc2wdPweb84iD-SOT7cx0gsYjafQ71oWWHIl_YFcwp5LCUg6t8S38spd6KMrwMRAoAvqWdk0fYeVMDrh7qo_w1paLTUK_jBQJQHsKG58LfyK3tP5S7ucq"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Green Life Section (Bento Grid) -->
+<section class="py-24 bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Почему выбирают Green Life?</h2>
+<div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bento-card md:col-span-2 bg-secondary-container/20 p-10 rounded-[24px] flex flex-col md:flex-row gap-8 items-center border border-secondary-container/30">
+<div class="md:w-1/2">
+<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6 text-on-primary">
+<span class="material-symbols-outlined text-3xl">settings_suggest</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Готовая бизнес-система</h3>
+<p class="text-on-surface-variant font-body-md">Мы предоставляем проверенные алгоритмы, автоматизированные воронки продаж и полное маркетинговое сопровождение с первого дня.</p>
+</div>
+<div class="md:w-1/2 flex justify-center">
+<img alt="Dashboard Analytics" class="rounded-xl shadow-lg border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnX1XgVtvqHnUzfRzFtRC-QIZz9anlHV-Aas6Vqq7fWrh67P0tafpaiaZ6r_F7oEjxnMKsLMfQ8GfDB2cwSf6Zqgfizhs1TW0u7535d5PkWHlcf1B2DN-e1I41UEnyKZnJdFHmXPdbEGxhJo8-laKW_N_FOGNXDrBTmhhriJs8ykrIVCq-BVeB4CO8TDXE4aduQ4sNMxdneW7enLrYDdHc7yYL-L422Q1vAeNrLSsC_YCW2J0HfEG_w7tVkCk2MM2PG_Z6lwEQFJwT"/>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bento-card bg-surface-container p-10 rounded-[24px] border border-outline-variant/30">
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center mb-6 text-on-primary-container">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Глобальный охват</h3>
+<p class="text-on-surface-variant font-body-md">Ваш бизнес не ограничен границами. Стройте международную команду и получайте доход из любой точки мира.</p>
+</div>
+<!-- Card 3 -->
+<div class="bento-card bg-white p-10 rounded-[24px] border border-outline-variant/50 shadow-sm">
+<div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center mb-6 text-on-secondary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Эко-продукты</h3>
+<p class="text-on-surface-variant font-body-md">Качественные, востребованные товары ежедневного потребления, созданные с заботой о природе.</p>
+</div>
+<!-- Card 4 -->
+<div class="bento-card md:col-span-2 bg-primary/5 p-10 rounded-[24px] border border-primary/10 flex flex-col justify-center">
+<div class="grid sm:grid-cols-2 gap-8">
+<div>
+<h3 class="font-headline-md text-headline-md mb-4">Обучение и поддержка</h3>
+<p class="text-on-surface-variant font-body-md">Доступ к эксклюзивной академии Green Life, личный наставник и регулярные вебинары от топ-лидеров индустрии.</p>
+</div>
+<div class="flex items-center justify-center gap-4">
+<div class="text-center">
+<p class="text-primary font-bold text-4xl mb-1">24/7</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Поддержка</p>
+</div>
+<div class="h-12 w-px bg-primary/20"></div>
+<div class="text-center">
+<p class="text-primary font-bold text-4xl mb-1">100+</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Курсов</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Как это работает?</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Всего 4 простых шага отделяют вас от запуска собственного дела</p>
+</div>
+<div class="relative">
+<!-- Connection Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-primary-fixed-dim -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative z-10">
+<div class="group">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">1</div>
+<div class="bg-white p-8 rounded-2xl text-center shadow-sm h-full group-hover:shadow-md transition-shadow">
+<h4 class="font-label-md text-label-md text-primary mb-3">Регистрация</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Создайте аккаунт и получите доступ к кабинету партнера.</p>
+</div>
+</div>
+<div class="group">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">2</div>
+<div class="bg-white p-8 rounded-2xl text-center shadow-sm h-full group-hover:shadow-md transition-shadow">
+<h4 class="font-label-md text-label-md text-primary mb-3">Обучение</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Пройдите базовый курс и выберите стратегию развития.</p>
+</div>
+</div>
+<div class="group">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">3</div>
+<div class="bg-white p-8 rounded-2xl text-center shadow-sm h-full group-hover:shadow-md transition-shadow">
+<h4 class="font-label-md text-label-md text-primary mb-3">Действие</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Используйте готовые инструменты для привлечения партнеров.</p>
+</div>
+</div>
+<div class="group">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">4</div>
+<div class="bg-white p-8 rounded-2xl text-center shadow-sm h-full group-hover:shadow-md transition-shadow">
+<h4 class="font-label-md text-label-md text-primary mb-3">Результат</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Масштабируйте доход и получайте бонусы от компании.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories -->
+<section class="py-24 overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-12">Истории успеха</h2>
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Story 1 -->
+<div class="flex-1 bg-surface-bright rounded-3xl p-8 border border-outline-variant/30 relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="text-body-lg font-body-lg text-on-background italic mb-8">
+                            "Благодаря системе Green Life я вышла на доход в 5000$ уже через полгода. Здесь не нужно изобретать велосипед — всё уже продумано за тебя."
+                        </p>
+<div class="flex items-center gap-4">
+<img alt="Success Story Partner" class="w-14 h-14 rounded-full object-cover ring-2 ring-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtziNGMlyxFUbxBksVkaM9l3CTHiqUMOq6kneMYEnFv6CBLSTytqf-msh5l9r82dGyLJFmUC7Kq1ZtGoSjwo3k63g8i51ne2K3vx4LFbyxw4AM_XB5omfzcmxdAQLppxKwcW9UIKnplyzO93hPaRknqFgM-bSXbiie1XLSYC97-WPHgXd9CoepiBRb5TFOjBTcxOkyxsyrabLMeJDiLVssdB-UcBgJM2LZl7g-EEE806rQkrZzCG0hfU7pbjbQNoDl7CkII7DzA3hm"/>
+<div>
+<h5 class="font-label-md text-label-md text-on-background">Анна Сергеева</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Золотой Директор, Москва</p>
+</div>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+</div>
+<!-- Story 2 -->
+<div class="flex-1 bg-surface-bright rounded-3xl p-8 border border-outline-variant/30 relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="text-body-lg font-body-lg text-on-background italic mb-8">
+                            "Бизнес, который растет даже когда я отдыхаю. Система обучения Green Life позволила мне быстро собрать команду из 12 стран."
+                        </p>
+<div class="flex items-center gap-4">
+<img alt="Success Story Partner" class="w-14 h-14 rounded-full object-cover ring-2 ring-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1BQcufj4LAfeHbYWFZclMYStobw23qCfiSomCHGrqEVlgJZ1rzAL8MT_lNHlpU7TsElz90zy035vsWTb94kVS9ll_jKKHVfPhif0lvN_raovQSngAyfEX1D2HmeeUJTxdHB42CTLkzqJSxlP3fRe0AQ9r6y9cQV26-0-I9mefmgCBHxtZVS_7pjvPnBr8l-SPxWEdn8yuE3GdlT-9oPHXvAVtVo2qa3FOKP9K0_981aN-H9zWrayQbbW3l8d_4ZQ5lG_-TdcWBl_T"/>
+<div>
+<h5 class="font-label-md text-label-md text-on-background">Марк Петров</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Бриллиантовый Лидер, Алматы</p>
+</div>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 max-w-container-max mx-auto px-margin-desktop mb-24">
+<div class="bg-primary rounded-[32px] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+<!-- Decorative Elements -->
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute top-10 left-10 w-40 h-40 border-4 border-white rounded-full"></div>
+<div class="absolute bottom-10 right-10 w-60 h-60 border-2 border-white rounded-full"></div>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary mb-6 relative z-10">Готовы изменить свою жизнь?</h2>
+<p class="text-primary-fixed-dim font-body-lg text-body-lg mb-12 max-w-2xl mx-auto relative z-10">
+                Присоединяйтесь к Green Life сегодня и получите пошаговый план запуска вашего бизнеса с нуля. Мы поможем вам на каждом этапе.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-10">
+<button class="bg-white text-primary px-10 py-5 rounded-2xl font-label-md text-label-md hover:scale-105 transition-transform shadow-xl">
+                    Стать партнером сейчас
+                </button>
+<button class="text-on-primary border border-on-primary/30 px-10 py-5 rounded-2xl font-label-md text-label-md hover:bg-white/10 transition-colors">
+                    Бесплатная консультация
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full bg-surface-container dark:bg-on-background">
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter">
+<div class="max-w-xs">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4">
+                    Green Life
+                </div>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-md mb-6">
+                    Ваш проводник в мир экологичного бизнеса и неограниченных возможностей.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-10">
+<div>
+<h6 class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim mb-4">Компания</h6>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-secondary hover:translate-x-1 duration-200 inline-block" href="#">О нас</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-secondary hover:translate-x-1 duration-200 inline-block" href="#">Миссия</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-secondary hover:translate-x-1 duration-200 inline-block" href="#">Контакты</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim mb-4">Юридическая информация</h6>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-secondary hover:translate-x-1 duration-200 inline-block" href="#">Политика конфиденциальности</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-secondary hover:translate-x-1 duration-200 inline-block" href="#">Условия использования</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-secondary hover:translate-x-1 duration-200 inline-block" href="#">Раскрытие доходов</a></li>
+</ul>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<h6 class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim mb-4">Свяжитесь с нами</h6>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 duration-200" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 duration-200" href="#"><span class="material-symbols-outlined">call</span></a>
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 duration-200" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant/20 flex flex-col md:flex-row items-center justify-between text-on-surface-variant/60 font-label-sm text-label-sm">
+<p>© 2026 Green Life Global. All rights reserved. Professional Network Marketing Opportunity.</p>
+<p class="mt-4 md:mt-0">Сделано с заботой о будущем.</p>
+</div>
+</footer>
+</div>
+<!-- ===== END PAGE: HOME ===== -->
+
+
+<!-- ===== PAGE: ABOUT ===== -->
+<div id="page-about" class="page">
+<main>
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block py-1 px-4 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-6 uppercase tracking-wider">Ваш готовый бизнес</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-6 leading-tight">Бизнес-модель как современная франшиза</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        Green Life предлагает уникальную концепцию сетевого маркетинга, которая работает по принципам классической франшизы, обеспечивая стабильность, качество и неограниченный рост.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:shadow-xl hover:-translate-y-1 transition-all">Узнать маркетинг-план</button>
+<button class="border border-outline text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container-low transition-all">Смотреть продукты</button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-[48px] overflow-hidden shadow-2xl relative z-10">
+<img alt="Teamwork" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Bd1IVF4ze0L-SiJZRrHkd5aDhkd6zti-5ne67Xe-VVEK0GcFcDSlI2y0WgVOrtVLWfXxzDQEw9d4rnhnjFsjs8PAQsEQAc9Q-GOsnExPjeVuTTdfJ1jmGIpSc0trmOVqrpgSecxMubw5MkIUzEbkQsLOPmsWOVB6QRV8UOVRpxz90zDBrKbhL6HNHf1v8JLC5VvxIcMkpJM6hMRylyurAXNdSsJTmx94Q7zNbsj79nrCQYNZOuv9NuiPxO6dADsmAxPmdq_2cwuP"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-highest p-8 rounded-3xl shadow-xl z-20 max-w-xs glass-card">
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+<span class="font-headline-md text-headline-md text-primary">+120%</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Средний рост партнерской сети в первый год сотрудничества</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Financial Freedom Bento Grid -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Путь к финансовой свободе</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Мы предоставляем все инструменты для масштабирования вашего дохода: от премиальных товаров до автоматизированных систем обучения.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Income Card -->
+<div class="bg-white p-10 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-secondary-container rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container">account_balance_wallet</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Пассивный доход</h3>
+<p class="text-on-surface-variant">Создайте систему, которая работает на вас 24/7. Ваша сеть — это ваш актив, приносящий доход даже во время отдыха.</p>
+</div>
+<!-- Growth Card -->
+<div class="bg-white p-10 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary-container">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Быстрый старт</h3>
+<p class="text-on-surface-variant">Готовая бизнес-модель "под ключ" позволяет запустить свое дело без огромных рисков и сложной логистики.</p>
+</div>
+<!-- Support Card -->
+<div class="bg-white p-10 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-fixed">school</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Обучение</h3>
+<p class="text-on-surface-variant">Доступ к эксклюзивным тренингам от топ-лидеров и экспертов в области маркетинга и продаж.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Marketing Plan Section -->
+<section class="py-24 bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-on-background rounded-[40px] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+<div class="lg:w-1/2 p-12 lg:p-20 text-white">
+<h2 class="font-headline-lg text-headline-lg mb-8">Маркетинг-план: Прозрачность и выгода</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-2xl">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Справедливое распределение</h4>
+<p class="text-surface-variant font-body-md">Вознаграждение за каждый этап развития вашей структуры.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-2xl">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Бонусная система</h4>
+<p class="text-surface-variant font-body-md">Автобонусы, путешествия и премии за достижение новых рангов.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-2xl">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Глобальные выплаты</h4>
+<p class="text-surface-variant font-body-md">Единый кабинет для управления доходами из любой точки мира.</p>
+</div>
+</li>
+</ul>
+<button class="mt-12 bg-primary-container text-on-primary-container px-10 py-4 rounded-full font-label-md text-label-md hover:bg-primary-fixed transition-colors">Скачать PDF презентацию</button>
+</div>
+<div class="lg:w-1/2 relative min-h-[400px]">
+<img alt="Growth Charts" class="absolute inset-0 w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtRleK7qTT1Eu3FjsIyFSjjHND6_ndnBkG1Y52hT7adOU1svA4Djg7t7nya5AmOJeZredwiqgCXUq8MvjKkNm68ff79A4b8cGJtohJ-_cY8bkf_4f-q60xeFE9KlIMfJlXid3lo7SxH6dTISS1Wy4NzdiCqpvPHXCB07OCR5MzgFw8wO43h_69VNB2abUka3cHiJm313_7PQNRkeq6oq9s9Sxqh__kalkGt7OdkpJrVE2a4cDOUpyq8r_sfRf_zzMV1bsCgu9rAiya"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Quality Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img alt="Product 1" class="rounded-2xl shadow-lg w-full aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABn6EEXSJq2bz-cjlQmJbtfGtOOtamBlqNzw44DHs6_Q8fwWZcc_dsGMW3OaSMQRzEhqdN094Pk0eArha0r89jR8BJf2iPm_Y-GcoAU5emw141ePDzBv9AbnabG86ahr9nUVojyIbisICqP-8Y45BQjQsmad6HWZvO8FxNNoyMTDcah36e99dy6T6eF24ZrTj8rQhP6WVpIgstnzmZ6Pu8aHfwZsecLOL4vvgLM__Dz2XYg7aBnlh6jIGW7MXpki5WZrbgnlJZ2OnT"/>
+<img alt="Product 2" class="rounded-2xl shadow-lg w-full aspect-[3/4] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe8_dKw9Uu2-Vu9qfqHxRo6yM6Y01o3in28w_5lQuV82cA5z_p8zgmrdBieKd4qWAN55Y0Mj3moFqZcy5WQIzbHUanSuzI5k0NLfKHAtxq3r1kmg_PM2UKm-_iDXpq0CDOFmDadR8sbdx2g5SOaLa0Lwp_SHK3ueXq8DMA-holoPZbdNAYpIyftKJlWaENvjXzYF5zwynTtJ2mbaKpM3mFGoT2VLpJIKE3rOtVSKdF0-XNbqji-oQkzgYa6grTs5iWS2jZSSldzHYQ"/>
+</div>
+<div class="space-y-4 pt-8">
+<img alt="Product 3" class="rounded-2xl shadow-lg w-full aspect-[3/4] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoHYZP5cUd9DmB_dc7PK9ThUs1HFBBM5v-ck7gX64awIFEZXj4VWWmcdDshRoVNZ2tJ2wulfEbohiZdvv3qn0nqRnqosuGflRhK4fxddwfFEtrqAttifwpUouIomLE3tZhP-5iedOPaWCNFLWWOn5qQzZXRH30TM97ZJi9prjlqBW_gPbbR002l8OqJ4HsifguxDSyFF60ybIjGAViaEgesO-7LVSsjXiFg4EzKEiVijeK8DX0E_GD1794qdS2Y2UVKpX3Igns5PHJ"/>
+<img alt="Product 4" class="rounded-2xl shadow-lg w-full aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASWu3bK5_uLxz9oX61MA1OXN_BYP4NJBuAk8a2SrCfr1pb8L2yhz7PXrNcnW-RyTk3GqvM4x-Jf2uNB-pd9bNURhar-1P5k22MYB-OMmgHoY0927ZTWZLrSZ4guctCxq6vfcLgVrrM6snFc7a78PM99O2gLzbpP1RMqqobQ9H86-FwNRzCFVohmhViA17TSyXjoX6WuFvHVjUYBsHuHP8Peapqf0wwfi8CaGXjYYpue0H90c890rl_7g1S-OCF4F6TWTV5O--KAeSz"/>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 lg:pl-12">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Безупречное качество продуктов</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Наш успех основан на продукте, которым гордятся. Мы объединили экологичность, инновации и доступность, чтобы каждый товар Green Life становился незаменимым в каждом доме.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="font-label-md text-label-md">Экологически чистые компоненты</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-label-md text-label-md">Международные сертификаты качества</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary">science</span>
+<span class="font-label-md text-label-md">Собственные R&amp;D лаборатории</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Expansion Section -->
+<section class="py-24 bg-white overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Глобальная экспансия</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Ваш бизнес не ограничен стенами города. Стройте международную империю вместе с нами.</p>
+</div>
+<div class="relative h-[500px] rounded-[40px] overflow-hidden shadow-xl">
+<div class="absolute inset-0 bg-primary opacity-10"></div>
+<div class="w-full h-full flex items-center justify-center bg-surface-container-high">
+<div class="text-center">
+<span class="material-symbols-outlined text-primary text-9xl animate-pulse">public</span>
+<div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="glass-card p-4 rounded-xl">
+<div class="font-bold text-primary text-xl">40+</div>
+<div class="text-sm">Стран присутствия</div>
+</div>
+<div class="glass-card p-4 rounded-xl">
+<div class="font-bold text-primary text-xl">500+</div>
+<div class="text-sm">Сервис-центров</div>
+</div>
+<div class="glass-card p-4 rounded-xl">
+<div class="font-bold text-primary text-xl">1М+</div>
+<div class="text-sm">Партнеров</div>
+</div>
+<div class="glass-card p-4 rounded-xl">
+<div class="font-bold text-primary text-xl">24/7</div>
+<div class="text-sm">Поддержка</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-primary text-on-primary rounded-[32px] p-12 lg:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container opacity-20 rounded-full -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-primary-fixed opacity-10 rounded-full -ml-24 -mb-24"></div>
+<h2 class="font-headline-lg text-headline-lg mb-6 relative z-10">Готовы стать частью Green Life?</h2>
+<p class="font-body-lg text-body-lg mb-10 max-w-xl mx-auto opacity-90 relative z-10">Начните свой путь к успеху сегодня с поддержкой мирового лидера в индустрии.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+<button class="bg-white text-primary px-12 py-4 rounded-full font-bold hover:bg-surface-container transition-colors shadow-lg">Зарегистрироваться</button>
+<button class="border-2 border-white text-white px-12 py-4 rounded-full font-bold hover:bg-white/10 transition-colors">Связаться с куратором</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container dark:bg-on-background border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter">
+<div class="space-y-6 max-w-md">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Green Life</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Мы создаем возможности для тех, кто стремится к свободе, экологичному образу жизни и профессиональному росту.</p>
+<div class="text-on-surface-variant font-label-sm text-label-sm">
+                    © 2026 Green Life Global. All rights reserved. Professional Network Marketing Opportunity.
+                </div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-label-md text-on-surface font-bold">Компания</h5>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Контакты</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Соответствие</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-label-md text-on-surface font-bold">Юридически</h5>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Политика конфиденциальности</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Условия использования</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-label-md text-on-surface font-bold">Раскрытие</h5>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Раскрытие доходов</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- ===== END PAGE: ABOUT ===== -->
+
+<!-- ===== PAGE: TRAINING ===== -->
+<div id="page-training" class="page">
+<main class="max-w-container-max mx-auto px-margin-desktop py-12">
+<!-- Hero Section -->
+<section class="mb-20 text-center max-w-3xl mx-auto">
+<h1 class="font-['Montserrat'] text-[48px] leading-[1.2] tracking-[-0.02em] font-bold text-on-surface mb-6">Ваш путь к успеху начинается с качественного обучения</h1>
+<p class="text-[18px] leading-[1.6] font-normal text-on-surface-variant">Мы предоставляем все необходимые инструменты и экспертную поддержку для развития вашего бизнеса в экосистеме Green Life.</p>
+</section>
+<!-- Step-by-Step Training (Bento Layout) -->
+<section class="mb-24">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-['Montserrat'] text-[32px] leading-[1.25] font-bold text-on-surface">Пошаговое обучение</h2>
+<div class="flex gap-2">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-[12px] font-medium">Уровень: Новичок</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Course Card -->
+<div class="md:col-span-8 relative overflow-hidden rounded-[24px] shadow-sm hover:shadow-md transition-shadow group h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgl4xSuhjy_5RYLTg9laGW8YkZX5tjlK9bIekomK4-48Pvkq6r3x-HPNNnXZgc8eOpejFX7Qs6p3obncNslK0KNzfUQIWOYmhXPxMe3Fvpg0i6XAkuUgRoZGoFBqxssiWEESYItk6VvhzDFvi4e3pLtegr9vAi7bSYPZilVm1n3UVhNHkWVZAyADOkE1r3sBAg05YcDnheswAXFu3RRxH45OCXmCI0UObT3MYno9bvZGYKbcN6ZiAPHvqPspBniiZ6LNkwicou0s7D" alt="Training"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+<span class="text-white/80 text-[12px] font-medium mb-2">МОДУЛЬ 01</span>
+<h3 class="text-white font-['Montserrat'] text-[24px] leading-[1.4] font-semibold mb-4">Основы сетевого маркетинга 2.0</h3>
+<p class="text-white/90 text-[16px] leading-[1.5] max-w-md mb-6">Изучите фундаментальные принципы построения устойчивого бизнеса в современной цифровой среде.</p>
+<button class="w-fit bg-primary text-on-primary px-8 py-3 rounded-full text-[14px] font-semibold flex items-center gap-2">
+  Начать обучение <span class="material-symbols-outlined">play_circle</span>
+</button>
+</div>
+</div>
+<!-- Side Cards -->
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="bg-surface-container-low p-6 rounded-[24px] border border-outline-variant hover:border-primary transition-colors cursor-pointer group">
+<div class="bg-primary-container w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary-container">psychology</span>
+</div>
+<h4 class="font-['Montserrat'] font-semibold text-[20px] mb-2">Психология продаж</h4>
+<p class="text-[16px] leading-[1.5] text-on-surface-variant">Как эффективно общаться с клиентами и партнерами.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-[24px] border border-outline-variant hover:border-primary transition-colors cursor-pointer group">
+<div class="bg-secondary-container w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container">trending_up</span>
+</div>
+<h4 class="font-['Montserrat'] font-semibold text-[20px] mb-2">Масштабирование</h4>
+<p class="text-[16px] leading-[1.5] text-on-surface-variant">Стратегии роста вашей команды до международного уровня.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Personal Mentor & Support -->
+<section class="mb-24 bg-secondary-container/20 rounded-[32px] overflow-hidden">
+<div class="flex flex-col md:flex-row items-center gap-12 p-8 md:p-16">
+<div class="w-full md:w-1/2 relative">
+<div class="relative z-10 rounded-[24px] overflow-hidden shadow-xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+<img class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ9nx6MQvRiAbcX-xzuL_ffqmmByEmcXLw9LDAibopzIBK-GbCbuX_ZclQdLcWjMGGOS_jQpf4D1CsJKf8higAl_kq4rg5J55rHqhJExvv02P9tKRil4j5DvgnnV8qRSZJJ1vMy5ud0HzwD8TiGQ5RwOQM1YHJYZAXRPz7deRxYxpPJjRJ7eckwe0Gvwwwk8QwAjZm1JfXFaQDN3sFc73Vdb2iLe1OtPfEeypMPQQFcRF0uswzZ_Oc_E-otoXOkdIe6JIJUK09WWJ7" alt="Mentor"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-fixed-dim rounded-full -z-0 opacity-50 blur-3xl"></div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<div class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[12px] font-medium">ВАШ НАСТАВНИК</div>
+<h2 class="font-['Montserrat'] text-[32px] leading-[1.25] font-bold text-on-surface">Персональное сопровождение на каждом этапе</h2>
+<p class="text-[18px] leading-[1.6] text-on-surface-variant">Вы не останетесь один на один с вопросами. За каждым новым партнером закрепляется опытный ментор, который поможет составить индивидуальный план развития и преодолеть первые трудности.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[16px] leading-[1.5]">Еженедельные стратегические сессии</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[16px] leading-[1.5]">Прямой доступ в закрытый чат поддержки 24/7</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[16px] leading-[1.5]">Анализ ваших показателей и корректировка действий</span>
+</li>
+</ul>
+<button class="border-2 border-primary text-primary px-8 py-3 rounded-full text-[14px] font-semibold hover:bg-primary hover:text-white transition-all duration-300">
+  Связаться с наставником
+</button>
+</div>
+</div>
+</section>
+<!-- Marketing Tools -->
+<section class="mb-24">
+<div class="text-center mb-12">
+<h2 class="font-['Montserrat'] text-[32px] leading-[1.25] font-bold text-on-surface mb-4">Инструменты маркетинга</h2>
+<p class="text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto">Мы подготовили всё необходимое для вашего продвижения. Используйте готовые решения и экономьте время на технической части.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tool 1 -->
+<div class="glass-card p-8 rounded-[24px] shadow-sm hover:translate-y-[-8px] transition-all duration-300">
+<div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">language</span>
+</div>
+<h3 class="font-['Montserrat'] text-[24px] leading-[1.4] font-semibold mb-3">Личный лендинг</h3>
+<p class="text-[16px] leading-[1.5] text-on-surface-variant mb-6">Готовый персональный сайт для привлечения новых партнеров и клиентов с вашей реферальной ссылкой.</p>
+<a class="text-primary text-[14px] font-semibold flex items-center gap-2 group" href="#">
+  Подробнее <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Tool 2 -->
+<div class="glass-card p-8 rounded-[24px] shadow-sm hover:translate-y-[-8px] transition-all duration-300">
+<div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">share</span>
+</div>
+<h3 class="font-['Montserrat'] text-[24px] leading-[1.4] font-semibold mb-3">SMM-пакет</h3>
+<p class="text-[16px] leading-[1.5] text-on-surface-variant mb-6">Библиотека готовых постов, сторис и видео-креативов для ваших социальных сетей на каждый день.</p>
+<a class="text-primary text-[14px] font-semibold flex items-center gap-2 group" href="#">
+  Открыть библиотеку <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Tool 3 -->
+<div class="glass-card p-8 rounded-[24px] shadow-sm hover:translate-y-[-8px] transition-all duration-300">
+<div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+</div>
+<h3 class="font-['Montserrat'] text-[24px] leading-[1.4] font-semibold mb-3">CRM-система</h3>
+<p class="text-[16px] leading-[1.5] text-on-surface-variant mb-6">Удобный личный кабинет для управления базой контактов, отслеживания продаж и аналитики роста команды.</p>
+<a class="text-primary text-[14px] font-semibold flex items-center gap-2 group" href="#">
+  Перейти в CRM <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Webinars Schedule -->
+<section class="mb-24">
+<div class="bg-on-background text-on-primary p-8 md:p-12 rounded-[32px] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-0"></div>
+<div class="relative z-10">
+<h2 class="font-['Montserrat'] text-[32px] leading-[1.25] font-bold mb-10 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-4xl">calendar_month</span>
+Расписание вебинаров
+</h2>
+<div class="space-y-4">
+<!-- Event 1 -->
+<div class="bg-white/5 border border-white/10 hover:bg-white/10 transition-colors p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="text-center min-w-[60px]">
+<div class="text-primary-fixed font-['Montserrat'] font-semibold text-[24px] leading-none">15</div>
+<div class="text-[12px] font-medium opacity-60">Окт</div>
+</div>
+<div>
+<h4 class="font-['Montserrat'] font-semibold text-[18px] mb-1">Как закрыть первые 5 сделок: Практикум</h4>
+<div class="flex items-center gap-4 text-[12px] font-medium opacity-70">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 19:00 MSK</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Елена Волкова</span>
+</div>
+</div>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 rounded-full text-[14px] font-semibold whitespace-nowrap">Записаться</button>
+</div>
+<!-- Event 2 -->
+<div class="bg-white/5 border border-white/10 hover:bg-white/10 transition-colors p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="text-center min-w-[60px]">
+<div class="text-primary-fixed font-['Montserrat'] font-semibold text-[24px] leading-none">17</div>
+<div class="text-[12px] font-medium opacity-60">Окт</div>
+</div>
+<div>
+<h4 class="font-['Montserrat'] font-semibold text-[18px] mb-1">Личный бренд в Instagram и Telegram</h4>
+<div class="flex items-center gap-4 text-[12px] font-medium opacity-70">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 18:30 MSK</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Артем Соколов</span>
+</div>
+</div>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 rounded-full text-[14px] font-semibold whitespace-nowrap">Записаться</button>
+</div>
+<!-- Event 3 -->
+<div class="bg-white/5 border border-white/10 hover:bg-white/10 transition-colors p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="text-center min-w-[60px]">
+<div class="text-primary-fixed font-['Montserrat'] font-semibold text-[24px] leading-none">20</div>
+<div class="text-[12px] font-medium opacity-60">Окт</div>
+</div>
+<div>
+<h4 class="font-['Montserrat'] font-semibold text-[18px] mb-1">Маркетинг-план Green Life: Путь к Бриллианту</h4>
+<div class="flex items-center gap-4 text-[12px] font-medium opacity-70">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 20:00 MSK</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Иван Иванов</span>
+</div>
+</div>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 rounded-full text-[14px] font-semibold whitespace-nowrap">Записаться</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- ===== END PAGE: TRAINING ===== -->
+
+<!-- ===== PAGE: PARTNER ===== -->
+<div id="page-partner" class="page">
+<style>
+  .custom-shadow { box-shadow: 0 10px 30px -5px rgba(6, 78, 59, 0.05); }
+</style>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 overflow-hidden bg-surface-bright">
+<div class="absolute inset-0 overflow-hidden -z-0">
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+<div class="relative z-10">
+  <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-6">Готовый бизнес под ключ</span>
+  <h1 class="font-headline-xl text-headline-xl text-on-background mb-6 leading-tight">Начните свой путь к успеху с Green Life</h1>
+  <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">Присоединяйтесь к нашей глобальной сети предпринимателей и стройте экологичный бизнес с неограниченным доходом.</p>
+  <div class="flex flex-wrap gap-4">
+    <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:scale-105 transition-all shadow-lg flex items-center gap-2" href="#partner-registration">
+      Зарегистрироваться сейчас <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+    <a class="border-2 border-primary text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-primary/5 transition-all" href="#partner-packs">Смотреть пакеты</a>
+  </div>
+</div>
+<div class="relative">
+  <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+  <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+  <img alt="Green Life Partners" class="rounded-[2rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5gWq1RseLXM8XwqpCEXtCQ5GEplc1TY8CJHLsFhiTDMTdFyDK__opn0Fy6i9Lpds7tI7nkwlO32qUN3r75QQpCh9qWdWX8yNGCuMhgLx0HvMbOlwafORWcyrwZt5dI7P4sTO6rSuJRKcg9TdGGoarIG1dQNayfYx-WRGdNZ1kHfspvawttl__-DG6G1hJ7A1LWiWL0Z8A9mmDHbcxCaqWe6TfASConqMG424POtfAvlMvM1DniPCYV7Dl_PoD0p7o8ZzTaFDukPD1"/>
+</div>
+</div>
+</section>
+
+<!-- Pricing/Starter Packs -->
+<section class="py-24 bg-white" id="partner-packs">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center mb-16">
+  <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Выберите свой пакет старта</h2>
+  <p class="font-body-md text-body-md text-on-surface-variant">Разные уровни входа для ваших амбициозных целей</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-3 gap-gutter">
+  <!-- Pack 1 -->
+  <div class="flex flex-col bg-surface-container-low p-8 rounded-[1.5rem] border border-outline-variant/30 hover:scale-105 transition-transform duration-300 custom-shadow">
+    <div class="mb-6">
+      <h3 class="font-headline-md text-headline-md text-primary mb-2">Стандарт</h3>
+      <div class="text-4xl font-bold text-on-background mb-4">$299</div>
+      <p class="font-body-md text-body-md text-on-surface-variant">Идеально для первого шага в бизнесе.</p>
+    </div>
+    <ul class="space-y-4 mb-10 flex-grow">
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Базовый набор продуктов</li>
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Личный кабинет</li>
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Обучение "Быстрый старт"</li>
+    </ul>
+    <a class="w-full text-center py-3 rounded-xl border-2 border-primary text-primary font-label-md hover:bg-primary hover:text-white transition-all" href="#partner-registration">Выбрать</a>
+  </div>
+  <!-- Pack 2 (Featured) -->
+  <div class="relative flex flex-col bg-white p-8 rounded-[1.5rem] border-2 border-primary scale-105 z-10 shadow-2xl">
+    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider">Популярный выбор</div>
+    <div class="mb-6">
+      <h3 class="font-headline-md text-headline-md text-primary mb-2">Бизнес</h3>
+      <div class="text-4xl font-bold text-on-background mb-4">$899</div>
+      <p class="font-body-md text-body-md text-on-surface-variant">Для тех, кто нацелен на серьезный рост.</p>
+    </div>
+    <ul class="space-y-4 mb-10 flex-grow">
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Полный ассортимент продукции</li>
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Доступ к VIP обучению</li>
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Маркетинговые инструменты</li>
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Приоритетная поддержка</li>
+    </ul>
+    <a class="w-full text-center py-4 rounded-xl bg-primary text-on-primary font-label-md hover:shadow-lg hover:scale-[1.02] transition-all" href="#partner-registration">Начать бизнес</a>
+  </div>
+  <!-- Pack 3 -->
+  <div class="flex flex-col bg-surface-container-low p-8 rounded-[1.5rem] border border-outline-variant/30 hover:scale-105 transition-transform duration-300 custom-shadow">
+    <div class="mb-6">
+      <h3 class="font-headline-md text-headline-md text-primary mb-2">Премиум</h3>
+      <div class="text-4xl font-bold text-on-background mb-4">$1999</div>
+      <p class="font-body-md text-body-md text-on-surface-variant">Максимальные привилегии и бонусы.</p>
+    </div>
+    <ul class="space-y-4 mb-10 flex-grow">
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Эксклюзивная коллекция</li>
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Личный коуч по бизнесу</li>
+      <li class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>Повышенный процент кэшбэка</li>
+    </ul>
+    <a class="w-full text-center py-3 rounded-xl border-2 border-primary text-primary font-label-md hover:bg-primary hover:text-white transition-all" href="#partner-registration">Выбрать</a>
+  </div>
+</div>
+</section>
+
+<!-- Registration Form -->
+<section class="py-24 bg-surface-container-lowest" id="partner-registration">
+<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-16 items-start">
+  <div class="sticky top-32">
+    <h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Готовы стать частью команды?</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Заполните форму ниже, и наш менеджер свяжется с вами для завершения регистрации и выбора стартового пакета.</p>
+    <div class="space-y-6">
+      <div class="flex gap-4 p-4 rounded-xl glass-card">
+        <span class="material-symbols-outlined text-primary p-3 bg-secondary-container rounded-lg h-fit">verified_user</span>
+        <div>
+          <h4 class="font-label-md text-label-md text-on-background">Официальное партнерство</h4>
+          <p class="text-sm text-on-surface-variant">Работайте в рамках законодательства и прозрачной системы.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 p-4 rounded-xl glass-card">
+        <span class="material-symbols-outlined text-primary p-3 bg-secondary-container rounded-lg h-fit">school</span>
+        <div>
+          <h4 class="font-label-md text-label-md text-on-background">Бесплатное обучение</h4>
+          <p class="text-sm text-on-surface-variant">Мы научим вас всему: от маркетинга до управления командой.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl border border-outline-variant/20">
+    <h3 class="font-headline-md text-headline-md text-on-background mb-8">Заявка на партнерство</h3>
+    <div class="space-y-6">
+      <div>
+        <label class="block text-sm font-bold text-secondary mb-2">Ваше имя</label>
+        <input class="w-full px-5 py-3 rounded-xl border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Иван Иванов" type="text"/>
+      </div>
+      <div>
+        <label class="block text-sm font-bold text-secondary mb-2">Email адрес</label>
+        <input class="w-full px-5 py-3 rounded-xl border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="example@mail.com" type="email"/>
+      </div>
+      <div>
+        <label class="block text-sm font-bold text-secondary mb-2">Номер телефона</label>
+        <input class="w-full px-5 py-3 rounded-xl border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+      </div>
+      <div>
+        <label class="block text-sm font-bold text-secondary mb-2">ID спонсора (если есть)</label>
+        <input class="w-full px-5 py-3 rounded-xl border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="ID12345678" type="text"/>
+      </div>
+      <div class="flex items-start gap-3 py-2">
+        <input class="mt-1 rounded text-primary focus:ring-primary" type="checkbox"/>
+        <span class="text-xs text-on-surface-variant leading-relaxed">Я соглашаюсь с <a class="text-primary underline" href="#">условиями использования</a> и политикой конфиденциальности.</span>
+      </div>
+      <button class="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md text-headline-md hover:bg-on-primary-fixed-variant shadow-lg transition-all transform active:scale-[0.98]" type="button">
+        Присоединиться к Green Life
+      </button>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-3xl mx-auto px-margin-desktop">
+  <h2 class="font-headline-lg text-headline-lg text-on-background mb-12 text-center">Часто задаваемые вопросы</h2>
+  <div class="space-y-4">
+    <div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/30 custom-shadow">
+      <button class="w-full px-8 py-6 flex items-center justify-between text-left group" onclick="togglePartnerFaq(this)">
+        <span class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Как быстро я смогу начать зарабатывать?</span>
+        <span class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+      </button>
+      <div class="partner-faq-content hidden px-8 pb-6">
+        <p class="text-on-surface-variant">Все зависит от вашего времени и усилий. Многие наши партнеры получают первые комиссионные уже в течение первой недели после прохождения базового обучения и активации пакета.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/30 custom-shadow">
+      <button class="w-full px-8 py-6 flex items-center justify-between text-left group" onclick="togglePartnerFaq(this)">
+        <span class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Нужен ли мне опыт в продажах?</span>
+        <span class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+      </button>
+      <div class="partner-faq-content hidden px-8 pb-6">
+        <p class="text-on-surface-variant">Нет, опыт не обязателен. Мы предоставляем пошаговую систему обучения, которая поможет вам освоить все необходимые навыки с нуля.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/30 custom-shadow">
+      <button class="w-full px-8 py-6 flex items-center justify-between text-left group" onclick="togglePartnerFaq(this)">
+        <span class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">Что делать, если у меня нет спонсора?</span>
+        <span class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+      </button>
+      <div class="partner-faq-content hidden px-8 pb-6">
+        <p class="text-on-surface-variant">Просто оставьте поле "ID спонсора" пустым. Система автоматически закрепит за вами опытного наставника в вашем регионе, который поможет вам на старте.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+</div>
+<!-- ===== END PAGE: PARTNER ===== -->
+
+<script>
+    // Scroll fade-in observer (declared first so showPage can use it)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+    function showPage(pageName) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        // Show target page
+        document.getElementById('page-' + pageName).classList.add('active');
+        // Scroll to top
+        window.scrollTo(0, 0);
+        // Update nav link styles
+        document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+            if (link.dataset.page === pageName) {
+                link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                link.classList.remove('text-on-surface-variant', 'hover:text-primary');
+            } else {
+                link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                link.classList.add('text-on-surface-variant', 'hover:text-primary');
+            }
+        });
+        // Re-run scroll animations for new page
+        document.querySelectorAll('#page-' + pageName + ' section > div').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+            // Immediately show elements already in viewport
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                section.classList.add('opacity-100', 'translate-y-0');
+                section.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }
+
+    // Nav click handlers
+    document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+        link.addEventListener('click', () => showPage(link.dataset.page));
+    });
+
+    // Partner page FAQ toggle
+    function togglePartnerFaq(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.material-symbols-outlined');
+        const isOpen = !content.classList.contains('hidden');
+        document.querySelectorAll('.partner-faq-content').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('#page-partner .material-symbols-outlined[class*="transition"]').forEach(i => i.style.transform = 'rotate(0deg)');
+        if (!isOpen) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // Init active state
+    showPage('home');
+
+    // Micro-interactions for bento cards
+    document.querySelectorAll('.bento-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        });
+    });
+
+    // Glass card hover
+    document.querySelectorAll('.glass-card, .bg-white').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-4px)';
+            card.style.transition = 'transform 0.3s ease-out';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+
+    document.querySelectorAll('section > div').forEach(section => {
+        section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            section.classList.add('opacity-100', 'translate-y-0');
+            section.classList.remove('opacity-0', 'translate-y-10');
+        }
+    });
+</script>
+</body></html>
